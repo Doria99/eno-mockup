@@ -97,3 +97,37 @@ La palette include automaticamente varianti per il tema scuro che vengono attiva
 - ✅ Supporto completo per tema scuro
 - ✅ Compatibilità con screen reader
 - ✅ Testato su diversi dispositivi e browser
+- ✅ **TUTTE LE PAGINE**: Colori centralizzati in tutto il sito web
+- ✅ **ZERO COLORI HARDCODATI**: Eliminati da tutte le pagine HTML
+
+## Pagine Aggiornate
+
+### File CSS
+- `styles.css` - Palette completa implementata
+
+### File HTML
+- `index.html` - Home page con colori centralizzati
+- `menu.html` - Menu con colori corretti
+- `contatti.html` - Pagina contatti con palette unificata
+- `chi-siamo.html` - Pagina chi siamo con colori coerenti
+- `prenota.html` - Form prenotazione con design uniforme
+
+### Modifiche Specifiche per Pagina
+
+#### menu.html
+- ✅ Bordi tratteggiati: `rgba(139, 0, 0, 0.2)` → `var(--color-primary)` con opacity
+- ✅ Testo descrizioni: `#666` → `var(--color-text-muted)`
+
+#### contatti.html
+- ✅ Testo informazioni: `#666` → `var(--color-text-muted)`
+- ✅ Ombre mappa: `rgba(0, 0, 0, 0.1)` → `var(--color-shadow-light)`
+- ✅ Bordi FAQ: `rgba(0, 0, 0, 0.1)` → `var(--color-border-light)`
+
+#### chi-siamo.html
+- ✅ Testo produttori: `#666` → `var(--color-text-muted)`
+- ✅ Ombre sezioni: `rgba(0, 0, 0, 0.1)` → `var(--color-shadow-light)`
+- ✅ Ombre valori: `rgba(0, 0, 0, 0.05)` → `var(--color-shadow-light)`
+
+#### prenota.html
+- ✅ Bordi form: `#ddd` → `var(--color-border-light)`
+- ✅ Ombre form: `rgba(0, 0, 0, 0.1)` → `var(--color-shadow-light)`
