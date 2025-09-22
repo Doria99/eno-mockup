@@ -1,0 +1,37 @@
+{
+  "name": "Osteria del Chianti",
+  "short_name": "Osteria",
+  "lang": "it",
+  "dir": "ltr",
+  "locales": {
+    "it": {
+      "name": "Osteria del Chianti",
+      "short_name": "Osteria",
+      "description": "Autentica trattoria toscana nel cuore di Firenze"
+    },
+    "en": {
+      "name": "Osteria del Chianti",
+      "short_name": "Osteria",
+      "description": "Authentic Tuscan trattoria in the heart of Florence"
+    }
+  },
+  "description": "Autentica trattoria toscana nel cuore di Firenze. Specialità tipiche come bistecca alla fiorentina, pappardelle al cinghiale e cantucci col vin santo dal 1965.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#F5F5DC",
+  "theme_color": "#8B0000",
+  "icons": [
+    {
+      "src": "images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400">
+  <!-- Sfondo piatto -->
+  <circle cx="250" cy="200" r="180" fill="#F5F5DC" />
+  
+  <!-- Pappardelle -->
+  <path d="M150,150 Q250,120 350,150 Q380,200 350,250 Q250,280 150,250 Q120,200 150,150 Z" fill="#F5DEB3" />
+  
+  <!-- Ragù di cinghiale -->
+  <path d="M170,170 Q250,150 330,170 Q350,200 330,230 Q250,250 170,230 Q150,200 170,170 Z" fill="#8B0000" />
+  
+  <!-- Pezzi di cinghiale -->
+  <circle cx="200" cy="180" r="10" fill="#4A0000" />
+  <circle cx="240" cy="170" r="8" fill="#4A0000" />
+  <circle cx="280" cy="180" r="9" fill="#4A0000" />
+  <circle cx="220" cy="210" r="10" fill="#4A0000" />
+  <circle cx="260" cy="220" r="8" fill="#4A0000" />
+  <circle cx="300" cy="200" r="9" fill="#4A0000" />
+  
+  <!-- Pappardelle (nastri di pasta) -->
+  <path d="M160,160 Q250,140 340,160" stroke="#F5DEB3" stroke-width="12" fill="none" />
+  <path d="M150,180 Q250,160 350,180" stroke="#F5DEB3" stroke-width="12" fill="none" />
+  <path d="M150,200 Q250,180 350,200" stroke="#F5DEB3" stroke-width="12" fill="none" />
+  <path d="M150,220 Q250,200 350,220" stroke="#F5DEB3" stroke-width="12" fill="none" />
+  <path d="M160,240 Q250,220 340,240" stroke="#F5DEB3" stroke-width="12" fill="none" />
+  
+  <!-- Erbe aromatiche -->
+  <g fill="#006400">
+    <circle cx="190" cy="160" r="3" />
+    <circle cx="310" cy="160" r="3" />
+    <circle cx="220" cy="190" r="3" />
+    <circle cx="280" cy="190" r="3" />
+    <circle cx="250" cy="220" r="3" />
+    <circle cx="200" cy="230" r="3" />
+    <circle cx="300" cy="230" r="3" />
+  </g>
+  
+  <!-- Parmigiano grattugiato -->
+  <g fill="#FFFACD" opacity="0.8">
+    <circle cx="210" cy="170" r="2" />
+    <circle cx="230" cy="160" r="2" />
+    <circle cx="270" cy="160" r="2" />
+    <circle cx="290" cy="170" r="2" />
+    <circle cx="200" cy="200" r="2" />
+    <circle cx="240" cy="190" r="2" />
+    <circle cx="260" cy="190" r="2" />
+    <circle cx="300" cy="200" r="2" />
+    <circle cx="210" cy="220" r="2" />
+    <circle cx="250" cy="230" r="2" />
+    <circle cx="290" cy="220" r="2" />
+  </g>
+  
+  <!-- Forchetta -->
+  <g transform="translate(380,150) rotate(45)">
+    <rect x="0" y="0" width="5" height="100" rx="2" fill="#C0C0C0" />
+    <path d="M0,0 L5,0 L5,-50 L0,-50 Z" fill="#C0C0C0" />
+    <path d="M0,-50 L0,-80 M2.5,-50 L2.5,-80 M5,-50 L5,-80" stroke="#C0C0C0" stroke-width="1" />
+  </g>
+  
+  <!-- Gocce di olio -->
+  <circle cx="180" cy="180" r="3" fill="#FFFF00" opacity="0.5" />
+  <circle cx="320" cy="180" r="3" fill="#FFFF00" opacity="0.5" />
+  <circle cx="250" cy="200" r="3" fill="#FFFF00" opacity="0.5" />
+  
+  <!-- Ombra del piatto -->
+  <circle cx="250" cy="200" r="180" fill="none" stroke="#CCCCCC" stroke-width="5" />
+  
+  <!-- Overlay per effetto fotografico -->
+  <rect width="500" height="400" fill="#000000" opacity="0.1" />
+</svg>

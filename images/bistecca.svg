@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Sfondo del piatto -->
+  <ellipse cx="400" cy="350" rx="350" ry="200" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="2"/>
+  
+  <!-- Bistecca alla fiorentina -->
+  <path d="M250 250 C300 200, 500 200, 550 250 C600 300, 600 400, 550 450 C500 500, 300 500, 250 450 C200 400, 200 300, 250 250 Z" fill="#8B4513" stroke="#5D2906" stroke-width="2"/>
+  
+  <!-- Parte interna della bistecca (al sangue) -->
+  <path d="M280 280 C320 240, 480 240, 520 280 C560 320, 560 380, 520 420 C480 460, 320 460, 280 420 C240 380, 240 320, 280 280 Z" fill="#B22222" stroke="#8B0000" stroke-width="1"/>
+  
+  <!-- Osso a T caratteristico -->
+  <path d="M400 240 L400 460" stroke="#F5F5DC" stroke-width="15" stroke-linecap="round"/>
+  <path d="M350 300 L450 300" stroke="#F5F5DC" stroke-width="15" stroke-linecap="round"/>
+  
+  <!-- Dettagli della cottura -->
+  <path d="M300 300 L350 320 L380 290 L420 330 L450 310 L500 330" stroke="#5D2906" stroke-width="2" fill="none"/>
+  <path d="M300 350 L350 370 L380 340 L420 380 L450 360 L500 380" stroke="#5D2906" stroke-width="2" fill="none"/>
+  <path d="M300 400 L350 420 L380 390 L420 430 L450 410 L500 430" stroke="#5D2906" stroke-width="2" fill="none"/>
+  
+  <!-- Gocce di olio d'oliva -->
+  <circle cx="320" cy="270" r="5" fill="#808000" opacity="0.7"/>
+  <circle cx="480" cy="270" r="5" fill="#808000" opacity="0.7"/>
+  <circle cx="350" cy="450" r="5" fill="#808000" opacity="0.7"/>
+  <circle cx="450" cy="450" r="5" fill="#808000" opacity="0.7"/>
+  
+  <!-- Rametto di rosmarino -->
+  <line x1="550" y1="400" x2="600" y2="350" stroke="#006400" stroke-width="2"/>
+  <line x1="560" y1="390" x2="580" y2="370" stroke="#006400" stroke-width="1"/>
+  <line x1="570" y1="380" x2="590" y2="360" stroke="#006400" stroke-width="1"/>
+  <line x1="580" y1="370" x2="600" y2="350" stroke="#006400" stroke-width="1"/>
+  <ellipse cx="560" cy="390" rx="3" ry="1" fill="#006400"/>
+  <ellipse cx="570" cy="380" rx="3" ry="1" fill="#006400"/>
+  <ellipse cx="580" cy="370" rx="3" ry="1" fill="#006400"/>
+  <ellipse cx="590" cy="360" rx="3" ry="1" fill="#006400"/>
+  
+  <!-- Sale grosso -->
+  <circle cx="300" cy="300" r="2" fill="#FFFFFF"/>
+  <circle cx="320" cy="320" r="2" fill="#FFFFFF"/>
+  <circle cx="480" cy="320" r="2" fill="#FFFFFF"/>
+  <circle cx="500" cy="300" r="2" fill="#FFFFFF"/>
+</svg>

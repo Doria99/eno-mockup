@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Osteria del Chianti | Autentica Cucina Toscana</title>
+    <meta name="description" content="Scopri il menu dell'Osteria del Chianti: piatti tipici toscani preparati con ingredienti freschi e locali. Bistecca alla fiorentina, pappardelle al cinghiale e molto altro.">
+    <meta name="keywords" content="menu ristorante toscano, cucina toscana, bistecca fiorentina, pappardelle cinghiale, ristorante firenze">
+    <meta name="author" content="Osteria del Chianti">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.osteriadelchianti.it/menu.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.osteriadelchianti.it/menu.html">
+    <meta property="og:title" content="Menu - Osteria del Chianti | Autentica Cucina Toscana">
+    <meta property="og:description" content="Scopri il menu dell'Osteria del Chianti: piatti tipici toscani preparati con ingredienti freschi e locali. Bistecca alla fiorentina, pappardelle al cinghiale e molto altro.">
+    <meta property="og:image" content="https://www.osteriadelchianti.it/images/bistecca.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.osteriadelchianti.it/menu.html">
+    <meta property="twitter:title" content="Menu - Osteria del Chianti | Autentica Cucina Toscana">
+    <meta property="twitter:description" content="Scopri il menu dell'Osteria del Chianti: piatti tipici toscani preparati con ingredienti freschi e locali. Bistecca alla fiorentina, pappardelle al cinghiale e molto altro.">
+    <meta property="twitter:image" content="https://www.osteriadelchianti.it/images/bistecca.jpg">
+    
+    <!-- Favicon e PWA -->
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#8B0000">
+    
+    <!-- Preload CSS -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .menu-section {
+            padding: 5rem 5%;
+            background-color: var(--color-light);
+        }
+        
+        .menu-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .menu-intro h2 {
+            font-family: var(--font-primary);
+            color: var(--color-primary);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .menu-intro p {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .menu-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .menu-category {
+            margin-bottom: 3rem;
+        }
+        
+        .menu-category h3 {
+            font-family: var(--font-primary);
+            color: var(--color-primary);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .menu-category h3::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: var(--color-primary);
+            margin: 0.5rem auto;
+        }
+        
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed rgba(139, 0, 0, 0.2);
+        }
+        
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        
+        .menu-item-info {
+            flex: 1;
+        }
+        
+        .menu-item-name {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .menu-item-desc {
+            color: #666;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+        
+        .menu-item-price {
+            font-weight: 700;
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-left: 1rem;
+            white-space: nowrap;
+        }
+        
+        .menu-note {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: var(--color-secondary);
+            border-radius: 5px;
+        }
+        
+        .menu-download {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .menu-download a {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--color-primary);
+            color: var(--color-light);
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: background-color 0.3s;
+        }
+        
+        .menu-download a:hover {
+            background-color: var(--color-accent);
+        }
+        
+        .menu-download i {
+            margin-right: 0.5rem;
+        }
+        
+        .allergeni {
+            margin-top: 4rem;
+            padding: 1.5rem;
+            background-color: var(--color-secondary);
+            border-radius: 10px;
+        }
+        
+        .allergeni h3 {
+            font-family: var(--font-primary);
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .allergeni-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .allergene-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .allergene-item i {
+            color: var(--color-primary);
+            margin-right: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-item {
+                flex-direction: column;
+            }
+            
+            .menu-item-price {
+                margin-left: 0;
+                margin-top: 0.5rem;
+            }
+        }
+    </style>
+    <!-- Schema.org JSON-LD structured data per il menu del ristorante -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Osteria del Chianti",
+      "image": "https://www.osteriadelchianti.it/images/bistecca.jpg",
+      "@id": "https://www.osteriadelchianti.it",
+      "url": "https://www.osteriadelchianti.it",
+      "telephone": "+39 055 123 4567",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via del Chianti, 42",
+        "addressLocality": "Firenze",
+        "postalCode": "50122",
+        "addressCountry": "IT"
+      },
+      "servesCuisine": ["Toscana", "Italiana"],
+      "priceRange": "€€",
+      "menu": {
+        "@type": "Menu",
+        "name": "Menu dell'Osteria del Chianti",
+        "description": "Piatti tipici della tradizione toscana",
+        "hasMenuSection": [
+          {
+            "@type": "MenuSection",
+            "name": "Antipasti",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Tagliere Toscano",
+                "description": "Selezione di salumi e formaggi tipici toscani con crostini",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "14.00",
+                  "priceCurrency": "EUR"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Crostini Misti",
+                "description": "Assortimento di crostini con fegatini, pomodoro e lardo",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "9.00",
+                  "priceCurrency": "EUR"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Primi Piatti",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Pappardelle al Cinghiale",
+                "description": "Pasta fresca fatta in casa con ragù di cinghiale maremmano e spezie toscane",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "16.00",
+                  "priceCurrency": "EUR"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Ribollita",
+                "description": "Tradizionale zuppa toscana con pane, cavolo nero e fagioli",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "12.00",
+                  "priceCurrency": "EUR"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Secondi Piatti",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Bistecca alla Fiorentina",
+                "description": "La vera bistecca toscana, cotta alla brace e servita al sangue con olio d'oliva e rosmarino",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "6.00",
+                  "priceCurrency": "EUR",
+                  "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": "6.00",
+                    "priceCurrency": "EUR",
+                    "unitText": "hg"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Dolci",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Cantucci col Vin Santo",
+                "description": "I tradizionali biscotti alle mandorle da intingere nel vino dolce toscano",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "8.00",
+                  "priceCurrency": "EUR"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+    </script>
+</head>
+<body>
+    <header role="banner">
+        <div class="logo-container">
+            <img src="images/logo.svg" alt="Logo Osteria del Chianti" class="logo" width="50" height="50">
+            <h1>Osteria del Chianti</h1>
+        </div>
+        <nav role="navigation" aria-label="Menu principale">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" aria-current="page">Menu</a></li>
+                <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-btn" aria-label="Apri menu mobile" role="button" tabindex="0">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="height: 40vh;">
+            <div class="hero-content">
+                <h2>Il Nostro Menu</h2>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <div class="menu-intro">
+                <h2>Sapori Autentici della Tradizione Toscana</h2>
+                <p>Il nostro menu celebra i sapori autentici della cucina toscana, con piatti preparati secondo le ricette tradizionali e ingredienti freschi di stagione provenienti da produttori locali. Ogni portata è un viaggio nei sapori della nostra terra.</p>
+            </div>
+            
+            <div class="menu-container">
+                <div class="menu-category">
+                    <h3>Antipasti</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Tagliere di Salumi e Formaggi Toscani</div>
+                            <div class="menu-item-desc">Selezione di prosciutto toscano, finocchiona, salame di cinghiale, pecorino fresco e stagionato con miele di castagno</div>
+                        </div>
+                        <div class="menu-item-price">€16</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Crostini Misti Toscani</div>
+                            <div class="menu-item-desc">Crostini con fegatini, pomodoro e basilico, lardo di Colonnata e fagioli cannellini</div>
+                        </div>
+                        <div class="menu-item-price">€12</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Panzanella</div>
+                            <div class="menu-item-desc">Insalata tradizionale con pane raffermo, pomodori, cetrioli, cipolla rossa di Certaldo, basilico e olio extra vergine del Chianti</div>
+                        </div>
+                        <div class="menu-item-price">€10</div>
+                    </div>
+                </div>
+                
+                <div class="menu-category">
+                    <h3>Primi Piatti</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Pappardelle al Ragù di Cinghiale</div>
+                            <div class="menu-item-desc">Pasta fresca all'uovo con ragù di cinghiale maremmano cotto lentamente con erbe aromatiche e Chianti Classico</div>
+                        </div>
+                        <div class="menu-item-price">€18</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Ribollita</div>
+                            <div class="menu-item-desc">Zuppa tradizionale toscana con cavolo nero, fagioli cannellini, pane toscano e verdure di stagione</div>
+                        </div>
+                        <div class="menu-item-price">€14</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Pici Cacio e Pepe</div>
+                            <div class="menu-item-desc">Pasta fatta a mano con pecorino toscano stagionato e pepe nero macinato fresco</div>
+                        </div>
+                        <div class="menu-item-price">€16</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Tortelli Maremmani</div>
+                            <div class="menu-item-desc">Pasta ripiena di ricotta e spinaci con burro fuso e salvia fresca</div>
+                        </div>
+                        <div class="menu-item-price">€17</div>
+                    </div>
+                </div>
+                
+                <div class="menu-category">
+                    <h3>Secondi Piatti</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Bistecca alla Fiorentina (per 2 persone)</div>
+                            <div class="menu-item-desc">Costata di manzo chianino cotta alla brace, servita al sangue con olio d'oliva, rosmarino e sale grosso (min. 1kg)</div>
+                        </div>
+                        <div class="menu-item-price">€7/hg</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Peposo dell'Impruneta</div>
+                            <div class="menu-item-desc">Stufato di manzo cotto lentamente con vino rosso, aglio e abbondante pepe nero</div>
+                        </div>
+                        <div class="menu-item-price">€20</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Arista di Maiale al Forno</div>
+                            <div class="menu-item-desc">Lombo di maiale arrostito con erbe aromatiche, servito con patate al rosmarino</div>
+                        </div>
+                        <div class="menu-item-price">€19</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Trippa alla Fiorentina</div>
+                            <div class="menu-item-desc">Trippa cotta nel pomodoro con carote, sedano, cipolla e parmigiano</div>
+                        </div>
+                        <div class="menu-item-price">€16</div>
+                    </div>
+                </div>
+                
+                <div class="menu-category">
+                    <h3>Contorni</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Fagioli all'Uccelletto</div>
+                            <div class="menu-item-desc">Fagioli cannellini stufati con salvia, aglio e pomodoro</div>
+                        </div>
+                        <div class="menu-item-price">€8</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Spinaci Saltati</div>
+                            <div class="menu-item-desc">Spinaci freschi saltati con aglio e olio extra vergine d'oliva</div>
+                        </div>
+                        <div class="menu-item-price">€7</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Patate Arrosto</div>
+                            <div class="menu-item-desc">Patate al forno con rosmarino e aglio</div>
+                        </div>
+                        <div class="menu-item-price">€7</div>
+                    </div>
+                </div>
+                
+                <div class="menu-category">
+                    <h3>Dolci</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Cantucci e Vin Santo</div>
+                            <div class="menu-item-desc">Biscotti alle mandorle serviti con vino dolce da dessert</div>
+                        </div>
+                        <div class="menu-item-price">€10</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Tiramisù della Casa</div>
+                            <div class="menu-item-desc">Dolce cremoso al mascarpone e caffè con cacao amaro</div>
+                        </div>
+                        <div class="menu-item-price">€8</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Panna Cotta ai Frutti di Bosco</div>
+                            <div class="menu-item-desc">Crema cotta con vaniglia e coulis di frutti di bosco freschi</div>
+                        </div>
+                        <div class="menu-item-price">€8</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Schiacciata alla Fiorentina</div>
+                            <div class="menu-item-desc">Dolce tradizionale all'arancia con zucchero a velo</div>
+                        </div>
+                        <div class="menu-item-price">€7</div>
+                    </div>
+                </div>
+                
+                <div class="menu-note">
+                    <p>I nostri piatti sono preparati con ingredienti freschi e di stagione. Il menu può variare in base alla disponibilità dei prodotti.</p>
+                </div>
+                
+                <div class="menu-download">
+                    <a href="#" download>
+                        <i class="fas fa-download"></i> Scarica il menu in PDF
+                    </a>
+                </div>
+                
+                <div class="allergeni">
+                    <h3>Informazioni sugli Allergeni</h3>
+                    <p>Per informazioni riguardanti la presenza di sostanze o prodotti che provocano allergie o intolleranze, si prega di rivolgersi al personale di servizio.</p>
+                    <div class="allergeni-list">
+                        <div class="allergene-item">
+                            <i class="fas fa-check"></i> Glutine
+                        </div>
+                        <div class="allergene-item">
+                            <i class="fas fa-check"></i> Latticini
+                        </div>
+                        <div class="allergene-item">
+                            <i class="fas fa-check"></i> Uova
+                        </div>
+                        <div class="allergene-item">
+                            <i class="fas fa-check"></i> Frutta a guscio
+                        </div>
+                        <div class="allergene-item">
+                            <i class="fas fa-check"></i> Sedano
+                        </div>
+                        <div class="allergene-item">
+                            <i class="fas fa-check"></i> Senape
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Osteria del Chianti</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Via del Chianti, 42 - Firenze</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+390551234567">+39 055 123 4567</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@osteriadelchianti.it">info@osteriadelchianti.it</a></p>
+            </div>
+            <div class="footer-orari">
+                <h3>Orari di Apertura</h3>
+                <p>Lunedì - Venerdì: 12:00 - 15:00, 19:00 - 23:00</p>
+                <p>Sabato - Domenica: 12:00 - 23:00</p>
+            </div>
+            <div class="footer-social">
+                <h3>Seguici</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Osteria del Chianti - Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="schema-breadcrumb.js"></script>
+    <script src="schema-validator.js"></script>
+    <!-- Analytics rispettosi della privacy -->
+    <script src="js/privacy-analytics.js"></script>
+    
+    <!-- Registrazione del Service Worker per funzionalità offline e caching -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('Service Worker registrato con successo:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('Registrazione Service Worker fallita:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

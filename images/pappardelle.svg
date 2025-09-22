@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Sfondo del piatto -->
+  <ellipse cx="400" cy="350" rx="350" ry="200" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="2"/>
+  
+  <!-- Pappardelle (nastri di pasta) -->
+  <path d="M250 250 C300 240, 500 260, 550 250 C560 300, 540 350, 550 400 C500 410, 300 390, 250 400 C240 350, 260 300, 250 250 Z" fill="#F5DEB3" stroke="#DEB887" stroke-width="2"/>
+  
+  <!-- Pappardella 1 -->
+  <path d="M280 270 C350 260, 450 270, 520 265 C525 280, 525 290, 520 305 C450 310, 350 300, 280 305 C275 290, 275 280, 280 270 Z" fill="#F5DEB3" stroke="#DEB887" stroke-width="1"/>
+  
+  <!-- Pappardella 2 -->
+  <path d="M290 320 C360 310, 440 320, 510 315 C515 330, 515 340, 510 355 C440 360, 360 350, 290 355 C285 340, 285 330, 290 320 Z" fill="#F5DEB3" stroke="#DEB887" stroke-width="1"/>
+  
+  <!-- Pappardella 3 -->
+  <path d="M300 370 C370 360, 430 370, 500 365 C505 380, 505 390, 500 405 C430 410, 370 400, 300 405 C295 390, 295 380, 300 370 Z" fill="#F5DEB3" stroke="#DEB887" stroke-width="1"/>
+  
+  <!-- Ragù di cinghiale -->
+  <path d="M300 280 C370 270, 430 280, 500 275" stroke="#5D1A0F" stroke-width="10" stroke-linecap="round"/>
+  <path d="M310 330 C380 320, 420 330, 490 325" stroke="#5D1A0F" stroke-width="10" stroke-linecap="round"/>
+  <path d="M320 380 C390 370, 410 380, 480 375" stroke="#5D1A0F" stroke-width="10" stroke-linecap="round"/>
+  
+  <!-- Pezzi di carne di cinghiale -->
+  <circle cx="320" cy="280" r="8" fill="#3A0F03"/>
+  <circle cx="380" cy="275" r="7" fill="#3A0F03"/>
+  <circle cx="450" cy="278" r="9" fill="#3A0F03"/>
+  <circle cx="330" cy="330" r="8" fill="#3A0F03"/>
+  <circle cx="390" cy="325" r="7" fill="#3A0F03"/>
+  <circle cx="460" cy="328" r="9" fill="#3A0F03"/>
+  <circle cx="340" cy="380" r="8" fill="#3A0F03"/>
+  <circle cx="400" cy="375" r="7" fill="#3A0F03"/>
+  <circle cx="470" cy="378" r="9" fill="#3A0F03"/>
+  
+  <!-- Erbe aromatiche (rosmarino, alloro) -->
+  <path d="M520 300 C530 290, 540 300, 550 290" stroke="#006400" stroke-width="1" fill="none"/>
+  <path d="M525 295 C535 285, 545 295, 555 285" stroke="#006400" stroke-width="1" fill="none"/>
+  <ellipse cx="520" cy="300" rx="3" ry="1" fill="#006400"/>
+  <ellipse cx="530" cy="290" rx="3" ry="1" fill="#006400"/>
+  <ellipse cx="540" cy="300" rx="3" ry="1" fill="#006400"/>
+  <ellipse cx="550" cy="290" rx="3" ry="1" fill="#006400"/>
+  
+  <!-- Foglia di alloro -->
+  <ellipse cx="500" cy="320" rx="15" ry="8" fill="#556B2F" stroke="#2F4F4F" stroke-width="1"/>
+  <path d="M485 320 C500 325, 515 320, 515 320" stroke="#2F4F4F" stroke-width="1" fill="none"/>
+  
+  <!-- Parmigiano grattugiato -->
+  <circle cx="350" cy="270" r="2" fill="#FFFACD"/>
+  <circle cx="370" cy="275" r="2" fill="#FFFACD"/>
+  <circle cx="390" cy="270" r="2" fill="#FFFACD"/>
+  <circle cx="410" cy="275" r="2" fill="#FFFACD"/>
+  <circle cx="430" cy="270" r="2" fill="#FFFACD"/>
+  <circle cx="450" cy="275" r="2" fill="#FFFACD"/>
+  <circle cx="360" cy="320" r="2" fill="#FFFACD"/>
+  <circle cx="380" cy="325" r="2" fill="#FFFACD"/>
+  <circle cx="400" cy="320" r="2" fill="#FFFACD"/>
+  <circle cx="420" cy="325" r="2" fill="#FFFACD"/>
+  <circle cx="440" cy="320" r="2" fill="#FFFACD"/>
+  <circle cx="370" cy="370" r="2" fill="#FFFACD"/>
+  <circle cx="390" cy="375" r="2" fill="#FFFACD"/>
+  <circle cx="410" cy="370" r="2" fill="#FFFACD"/>
+  <circle cx="430" cy="375" r="2" fill="#FFFACD"/>
+</svg>

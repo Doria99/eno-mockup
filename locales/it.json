@@ -1,0 +1,38 @@
+{
+  "general": {
+    "language": "Italiano",
+    "languageCode": "it"
+  },
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "about": "Chi Siamo",
+    "contact": "Contatti",
+    "book": "Prenota",
+    "language": "Lingua"
+  },
+  "footer": {
+    "contact": "Contatti",
+    "hours": "Orari di Apertura",
+    "follow": "Seguici",
+    "weekdays": "Lunedì - Venerdì: 12:00 - 15:00, 19:00 - 23:00",
+    "weekends": "Sabato - Domenica: 12:00 - 23:00",
+    "rights": "Tutti i diritti riservati"
+  },
+  "home": {
+    "welcome": "Benvenuti all'Osteria del Chianti",
+    "tagline": "Tradizione toscana dal 1987",
+    "discover": "Scopri il nostro menu",
+    "book": "Prenota un tavolo",
+    "specialties": "Le nostre specialità",
+    "steak": "Bistecca alla Fiorentina",
+    "steakDesc": "La nostra bistecca alla fiorentina è preparata secondo la tradizione toscana, cotta sulla brace di legna di quercia.",
+    "pasta": "Pappardelle al Cinghiale",
+    "pastaDesc": "Pasta fresca fatta in casa condita con un ricco ragù di cinghiale maremmano, un piatto che racconta la storia della nostra terra.",
+    "dessert": "Cantucci e Vin Santo",
+    "dessertDesc": "I nostri cantucci sono preparati secondo la ricetta della nonna, perfetti da accompagnare con un bicchiere di Vin Santo.",
+    "about": "La nostra storia",
+    "aboutDesc": "L'Osteria del Chianti nasce nel cuore della Toscana, dove la tradizione culinaria si fonde con la passione per i prodotti locali. Dal 1987 serviamo piatti autentici che raccontano la nostra terra.",
+    "readMore": "Leggi di più"
+  }
+}

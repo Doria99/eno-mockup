@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  <!-- Sfondo rustico -->
+  <rect x="0" y="0" width="1200" height="600" fill="#F5F5DC"/>
+  
+  <!-- Tavolo in legno rustico -->
+  <rect x="100" y="200" width="1000" height="300" fill="#8B4513" stroke="#5D2906" stroke-width="5"/>
+  <rect x="100" y="200" width="1000" height="20" fill="#5D2906"/>
+  <rect x="150" y="500" width="50" height="100" fill="#5D2906"/>
+  <rect x="1000" y="500" width="50" height="100" fill="#5D2906"/>
+  
+  <!-- Venature del legno -->
+  <path d="M150 250 C300 260, 600 240, 900 260, 1050 250" stroke="#5D2906" stroke-width="2" fill="none"/>
+  <path d="M150 300 C400 310, 700 290, 1050 300" stroke="#5D2906" stroke-width="2" fill="none"/>
+  <path d="M150 350 C350 340, 650 360, 1050 350" stroke="#5D2906" stroke-width="2" fill="none"/>
+  <path d="M150 400 C450 410, 750 390, 1050 400" stroke="#5D2906" stroke-width="2" fill="none"/>
+  <path d="M150 450 C250 440, 550 460, 1050 450" stroke="#5D2906" stroke-width="2" fill="none"/>
+  
+  <!-- Tovaglia a quadri -->
+  <rect x="150" y="220" width="900" height="280" fill="#FFFFFF" opacity="0.9"/>
+  
+  <!-- Pattern a quadri rossi sulla tovaglia -->
+  <pattern id="quadriRossi" patternUnits="userSpaceOnUse" width="50" height="50" patternTransform="rotate(0)">
+    <rect width="50" height="50" fill="#FFFFFF"/>
+    <rect width="25" height="25" fill="#B22222" opacity="0.7"/>
+    <rect x="25" y="25" width="25" height="25" fill="#B22222" opacity="0.7"/>
+  </pattern>
+  <rect x="150" y="220" width="900" height="280" fill="url(#quadriRossi)" opacity="0.7"/>
+  
+  <!-- Piatti sulla tavola -->
+  <circle cx="300" cy="350" r="60" fill="#FFFFFF" stroke="#CCCCCC" stroke-width="2"/>
+  <circle cx="500" cy="350" r="60" fill="#FFFFFF" stroke="#CCCCCC" stroke-width="2"/>
+  <circle cx="700" cy="350" r="60" fill="#FFFFFF" stroke="#CCCCCC" stroke-width="2"/>
+  <circle cx="900" cy="350" r="60" fill="#FFFFFF" stroke="#CCCCCC" stroke-width="2"/>
+  
+  <!-- Bicchieri di vino -->
+  <path d="M320 280 L340 280 L335 330 L325 330 Z" fill="none" stroke="#DDDDDD" stroke-width="1"/>
+  <path d="M323 290 L337 290 L333 325 L327 325 Z" fill="#8B0000" opacity="0.7"/>
+  
+  <path d="M520 280 L540 280 L535 330 L525 330 Z" fill="none" stroke="#DDDDDD" stroke-width="1"/>
+  <path d="M523 290 L537 290 L533 325 L527 325 Z" fill="#8B0000" opacity="0.7"/>
+  
+  <path d="M720 280 L740 280 L735 330 L725 330 Z" fill="none" stroke="#DDDDDD" stroke-width="1"/>
+  <path d="M723 290 L737 290 L733 325 L727 325 Z" fill="#8B0000" opacity="0.7"/>
+  
+  <path d="M920 280 L940 280 L935 330 L925 330 Z" fill="none" stroke="#DDDDDD" stroke-width="1"/>
+  <path d="M923 290 L937 290 L933 325 L927 325 Z" fill="#8B0000" opacity="0.7"/>
+  
+  <!-- Posate -->
+  <rect x="250" y="350" r="30" width="5" height="40" fill="#C0C0C0" rx="2" ry="2"/>
+  <rect x="350" y="350" r="30" width="5" height="40" fill="#C0C0C0" rx="2" ry="2"/>
+  
+  <rect x="450" y="350" r="30" width="5" height="40" fill="#C0C0C0" rx="2" ry="2"/>
+  <rect x="550" y="350" r="30" width="5" height="40" fill="#C0C0C0" rx="2" ry="2"/>
+  
+  <rect x="650" y="350" r="30" width="5" height="40" fill="#C0C0C0" rx="2" ry="2"/>
+  <rect x="750" y="350" r="30" width="5" height="40" fill="#C0C0C0" rx="2" ry="2"/>
+  
+  <rect x="850" y="350" r="30" width="5" height="40" fill="#C0C0C0" rx="2" ry="2"/>
+  <rect x="950" y="350" r="30" width="5" height="40" fill="#C0C0C0" rx="2" ry="2"/>
+  
+  <!-- Piatti di portata al centro -->
+  <ellipse cx="600" cy="350" rx="100" ry="60" fill="#FFFFFF" stroke="#CCCCCC" stroke-width="2"/>
+  
+  <!-- Bistecca alla fiorentina sul piatto centrale -->
+  <path d="M550 330 C570 310, 630 310, 650 330 C670 350, 670 370, 650 390 C630 410, 570 410, 550 390 C530 370, 530 350, 550 330 Z" fill="#8B4513" stroke="#5D2906" stroke-width="2"/>
+  <path d="M560 340 C575 325, 625 325, 640 340 C655 355, 655 370, 640 385 C625 400, 575 400, 560 385 C545 370, 545 355, 560 340 Z" fill="#B22222" stroke="#8B0000" stroke-width="1"/>
+  <path d="M600 325 L600 405" stroke="#F5F5DC" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Bottiglia di vino Chianti -->
+  <rect x="400" y="250" width="40" height="80" fill="#2E0000" rx="5" ry="5"/>
+  <rect x="410" y="230" width="20" height="20" fill="#2E0000"/>
+  <circle cx="420" cy="230" r="10" fill="#2E0000"/>
+  <rect x="415" y="220" width="10" height="10" fill="#2E0000"/>
+  
+  <!-- Etichetta della bottiglia -->
+  <rect x="405" y="270" width="30" height="40" fill="#F5F5DC" opacity="0.9"/>
+  
+  <!-- Cesto di pane toscano -->
+  <ellipse cx="800" cy="270" rx="50" ry="30" fill="#DEB887" stroke="#8B4513" stroke-width="2"/>
+  <ellipse cx="800" cy="260" rx="40" ry="20" fill="#F5DEB3"/>
+  
+  <!-- Pane toscano nel cesto -->
+  <ellipse cx="780" cy="255" rx="15" ry="10" fill="#F5DEB3" stroke="#DEB887" stroke-width="1"/>
+  <ellipse cx="810" cy="250" rx="18" ry="12" fill="#F5DEB3" stroke="#DEB887" stroke-width="1"/>
+  <ellipse cx="790" cy="245" rx="12" ry="8" fill="#F5DEB3" stroke="#DEB887" stroke-width="1"/>
+  
+  <!-- Rametti di rosmarino decorativi -->
+  <line x1="200" y1="250" x2="230" y2="230" stroke="#006400" stroke-width="2"/>
+  <line x1="205" y1="245" x2="225" y2="235" stroke="#006400" stroke-width="1"/>
+  <line x1="210" y1="240" x2="220" y2="235" stroke="#006400" stroke-width="1"/>
+  <ellipse cx="205" cy="245" rx="3" ry="1" fill="#006400"/>
+  <ellipse cx="210" cy="240" rx="3" ry="1" fill="#006400"/>
+  <ellipse cx="215" cy="235" rx="3" ry="1" fill="#006400"/>
+  
+  <line x1="970" y1="250" x2="1000" y2="230" stroke="#006400" stroke-width="2"/>
+  <line x1="975" y1="245" x2="995" y2="235" stroke="#006400" stroke-width="1"/>
+  <line x1="980" y1="240" x2="990" y2="235" stroke="#006400" stroke-width="1"/>
+  <ellipse cx="975" cy="245" rx="3" ry="1" fill="#006400"/>
+  <ellipse cx="980" cy="240" rx="3" ry="1" fill="#006400"/>
+  <ellipse cx="985" cy="235" rx="3" ry="1" fill="#006400"/>
+</svg>

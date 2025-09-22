@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prenota un Tavolo - Osteria del Chianti</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Schema.org per la pagina Prenota -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".prenotazione-intro h2", ".prenotazione-intro p"]
+      },
+      "mainEntity": {
+        "@type": "FoodEstablishmentReservation",
+        "name": "Prenotazione tavolo all'Osteria del Chianti",
+        "provider": {
+          "@type": "Restaurant",
+          "@id": "https://www.osteriadelchianti.it/#restaurant",
+          "name": "Osteria del Chianti",
+          "image": "https://www.osteriadelchianti.it/images/tavolata.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Via del Chianti 123",
+            "addressLocality": "Castellina in Chianti",
+            "addressRegion": "SI",
+            "postalCode": "53011",
+            "addressCountry": "IT"
+          }
+        },
+        "potentialAction": {
+          "@type": "ReserveAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.osteriadelchianti.it/prenota.html",
+            "inLanguage": ["it", "en"],
+            "actionPlatform": [
+              "http://schema.org/DesktopWebPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          },
+          "result": {
+            "@type": "FoodEstablishmentReservation",
+            "reservationFor": {
+              "@type": "FoodEstablishment",
+              "name": "Osteria del Chianti"
+            }
+          }
+        }
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .prenotazione-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: var(--color-light);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: var(--font-secondary);
+        }
+        
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        .submit-btn {
+            background-color: var(--color-primary);
+            color: var(--color-light);
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--color-accent);
+        }
+        
+        .prenotazione-info {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .prenotazione-info h2 {
+            font-family: var(--font-primary);
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .contatto-diretto {
+            margin-top: 3rem;
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--color-secondary);
+            border-radius: 10px;
+        }
+        
+        .contatto-diretto h3 {
+            font-family: var(--font-primary);
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .contatto-diretto .telefono {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin: 1rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.svg" alt="Logo Osteria del Chianti" class="logo">
+            <h1>Osteria del Chianti</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="height: 40vh;">
+            <div class="hero-content">
+                <h2>Prenota un Tavolo</h2>
+            </div>
+        </section>
+
+        <section style="padding: 5rem 5%;">
+            <div class="prenotazione-info">
+                <h2>Prenota la tua esperienza culinaria</h2>
+                <p>Compila il modulo sottostante per prenotare un tavolo presso l'Osteria del Chianti. Ti confermeremo la disponibilità entro 24 ore.</p>
+            </div>
+            
+            <form class="prenotazione-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nome">Nome e Cognome *</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Telefono *</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="data">Data *</label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ora">Ora *</label>
+                        <select id="ora" name="ora" required>
+                            <option value="">Seleziona un orario</option>
+                            <option value="12:00">12:00</option>
+                            <option value="12:30">12:30</option>
+                            <option value="13:00">13:00</option>
+                            <option value="13:30">13:30</option>
+                            <option value="14:00">14:00</option>
+                            <option value="14:30">14:30</option>
+                            <option value="19:00">19:00</option>
+                            <option value="19:30">19:30</option>
+                            <option value="20:00">20:00</option>
+                            <option value="20:30">20:30</option>
+                            <option value="21:00">21:00</option>
+                            <option value="21:30">21:30</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="persone">Numero di persone *</label>
+                        <select id="persone" name="persone" required>
+                            <option value="">Seleziona</option>
+                            <option value="1">1 persona</option>
+                            <option value="2">2 persone</option>
+                            <option value="3">3 persone</option>
+                            <option value="4">4 persone</option>
+                            <option value="5">5 persone</option>
+                            <option value="6">6 persone</option>
+                            <option value="7+">7+ persone</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="note">Note o richieste speciali</label>
+                    <textarea id="note" name="note" placeholder="Allergie, intolleranze, occasioni speciali, ecc."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Invia Richiesta</button>
+                </div>
+            </form>
+            
+            <div class="contatto-diretto">
+                <h3>Preferisci prenotare telefonicamente?</h3>
+                <p>Puoi contattarci direttamente al nostro numero:</p>
+                <div class="telefono">
+                    <i class="fas fa-phone"></i> <a href="tel:+390551234567">+39 055 123 4567</a>
+                </div>
+                <p>Oppure via WhatsApp:</p>
+                <a href="https://wa.me/390551234567" class="btn-prenota" style="margin-top: 1rem;">
+                    <i class="fab fa-whatsapp"></i> Prenota via WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Osteria del Chianti</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Via del Chianti, 42 - Firenze</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+390551234567">+39 055 123 4567</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@osteriadelchianti.it">info@osteriadelchianti.it</a></p>
+            </div>
+            <div class="footer-orari">
+                <h3>Orari di Apertura</h3>
+                <p>Lunedì - Venerdì: 12:00 - 15:00, 19:00 - 23:00</p>
+                <p>Sabato - Domenica: 12:00 - 23:00</p>
+            </div>
+            <div class="footer-social">
+                <h3>Seguici</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Osteria del Chianti - Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="schema-breadcrumb.js"></script>
+    <script src="schema-validator.js"></script>
+    <!-- Analytics rispettosi della privacy -->
+    <script src="js/privacy-analytics.js"></script>
+</body>
+</html>

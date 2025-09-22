@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Siamo - Osteria del Chianti</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Schema.org per la pagina Chi Siamo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "mainEntity": {
+        "@type": "Restaurant",
+        "@id": "https://www.osteriadelchianti.it/#restaurant",
+        "name": "Osteria del Chianti",
+        "description": "Autentica cucina toscana nel cuore del Chianti. Piatti tradizionali preparati con ingredienti freschi e locali.",
+        "image": "https://www.osteriadelchianti.it/images/tavolata.jpg",
+        "url": "https://www.osteriadelchianti.it",
+        "telephone": "+39 0577 123456",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Via del Chianti 123",
+          "addressLocality": "Castellina in Chianti",
+          "addressRegion": "SI",
+          "postalCode": "53011",
+          "addressCountry": "IT"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Famiglia Rossi"
+        },
+        "foundingDate": "1967",
+        "awardWinning": {
+          "@type": "Award",
+          "name": "Miglior Ristorante Tradizionale Toscano",
+          "description": "Premio per l'eccellenza nella cucina tradizionale toscana",
+          "awardedBy": "Associazione Ristoratori Toscani"
+        }
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .chi-siamo-section {
+            padding: 5rem 5%;
+            background-color: var(--color-light);
+        }
+        
+        .chi-siamo-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .chi-siamo-intro h2 {
+            font-family: var(--font-primary);
+            color: var(--color-primary);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .chi-siamo-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .storia {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 4rem;
+            align-items: center;
+        }
+        
+        .storia-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .storia-text h3 {
+            font-family: var(--font-primary);
+            color: var(--color-primary);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .storia-text p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        .storia-img {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .storia-img img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .famiglia {
+            background-color: var(--color-secondary);
+            padding: 3rem;
+            border-radius: 10px;
+            margin-bottom: 4rem;
+        }
+        
+        .famiglia h3 {
+            font-family: var(--font-primary);
+            color: var(--color-primary);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .membri {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        
+        .membro {
+            text-align: center;
+            max-width: 250px;
+        }
+        
+        .membro img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid var(--color-primary);
+        }
+        
+        .membro h4 {
+            font-family: var(--font-primary);
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .membro p {
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+        
+        .filosofia {
+            margin-bottom: 4rem;
+        }
+        
+        .filosofia h3 {
+            font-family: var(--font-primary);
+            color: var(--color-primary);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .valori {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .valore {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--color-light);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .valore i {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .valore h4 {
+            font-family: var(--font-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .produttori {
+            padding: 3rem;
+            background-color: var(--color-secondary);
+            border-radius: 10px;
+        }
+        
+        .produttori h3 {
+            font-family: var(--font-primary);
+            color: var(--color-primary);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .produttori-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .produttore {
+            display: flex;
+            align-items: center;
+            background-color: var(--color-light);
+            padding: 1rem;
+            border-radius: 5px;
+        }
+        
+        .produttore img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+            object-fit: cover;
+        }
+        
+        .produttore-info h4 {
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+        
+        .produttore-info p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .storia {
+                flex-direction: column-reverse;
+            }
+            
+            .membri {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.svg" alt="Logo Osteria del Chianti" class="logo">
+            <h1>Osteria del Chianti</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="height: 40vh;">
+            <div class="hero-content">
+                <h2>La Nostra Storia</h2>
+            </div>
+        </section>
+
+        <section class="chi-siamo-section">
+            <div class="chi-siamo-intro">
+                <h2>Chi Siamo</h2>
+                <p>Benvenuti all'Osteria del Chianti, dove la tradizione culinaria toscana incontra la passione per i sapori autentici e genuini.</p>
+            </div>
+            
+            <div class="chi-siamo-container">
+                <div class="storia">
+                    <div class="storia-text">
+                        <h3>La Nostra Storia</h3>
+                        <p>L'Osteria del Chianti nasce nel 1965 dalla passione di Nonno Giuseppe e Nonna Maria per la cucina tradizionale toscana. Situata nel cuore della regione del Chianti, la nostra osteria è stata testimone di decenni di storia e tradizione culinaria.</p>
+                        <p>Quello che iniziò come un piccolo locale frequentato principalmente da abitanti del posto, è diventato nel corso degli anni un punto di riferimento per chi cerca l'autentica cucina toscana, mantenendo sempre vivo lo spirito familiare e accogliente che ci contraddistingue.</p>
+                        <p>Oggi, la terza generazione della famiglia Rossi continua a portare avanti la tradizione, unendo il rispetto per le ricette storiche all'innovazione e alla ricerca della qualità.</p>
+                    </div>
+                    <div class="storia-img">
+                        <img src="images/osteria-vecchia.jpg" alt="L'Osteria del Chianti negli anni '60">
+                    </div>
+                </div>
+                
+                <div class="famiglia">
+                    <h3>La Famiglia Rossi</h3>
+                    <div class="membri">
+                        <div class="membro">
+                            <img src="images/chef.jpg" alt="Marco Rossi">
+                            <h4>Marco Rossi</h4>
+                            <p>Chef e Proprietario</p>
+                            <p>"La cucina è memoria, tradizione e amore per la propria terra."</p>
+                        </div>
+                        <div class="membro">
+                            <img src="images/sommelier.jpg" alt="Laura Rossi">
+                            <h4>Laura Rossi</h4>
+                            <p>Sommelier</p>
+                            <p>"Ogni bottiglia racconta la storia di un territorio e delle persone che lo vivono."</p>
+                        </div>
+                        <div class="membro">
+                            <img src="images/manager.jpg" alt="Paolo Rossi">
+                            <h4>Paolo Rossi</h4>
+                            <p>Responsabile Sala</p>
+                            <p>"L'ospitalità è nel nostro DNA, vogliamo che vi sentiate come a casa."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="filosofia">
+                    <h3>La Nostra Filosofia</h3>
+                    <p>All'Osteria del Chianti crediamo fermamente nel valore della tradizione culinaria toscana e nel rispetto per gli ingredienti locali e di stagione. La nostra filosofia si basa su principi semplici ma fondamentali: qualità, autenticità e ospitalità.</p>
+                    
+                    <div class="valori">
+                        <div class="valore">
+                            <i class="fas fa-leaf"></i>
+                            <h4>Km Zero</h4>
+                            <p>Utilizziamo ingredienti provenienti da produttori locali, sostenendo l'economia del territorio e garantendo freschezza e qualità.</p>
+                        </div>
+                        <div class="valore">
+                            <i class="fas fa-history"></i>
+                            <h4>Tradizione</h4>
+                            <p>Rispettiamo le ricette tradizionali toscane, tramandate di generazione in generazione, mantenendo viva la cultura gastronomica locale.</p>
+                        </div>
+                        <div class="valore">
+                            <i class="fas fa-heart"></i>
+                            <h4>Ospitalità</h4>
+                            <p>Accogliamo ogni ospite come parte della nostra famiglia, creando un'atmosfera calda e conviviale dove sentirsi a casa.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="produttori">
+                    <h3>I Nostri Produttori</h3>
+                    <p>Collaboriamo con piccoli produttori locali che condividono la nostra passione per la qualità e il rispetto per la terra. Ecco alcuni dei nostri fornitori di fiducia:</p>
+                    
+                    <div class="produttori-list">
+                        <div class="produttore">
+                            <img src="images/produttore1.jpg" alt="Fattoria Il Poggio">
+                            <div class="produttore-info">
+                                <h4>Fattoria Il Poggio</h4>
+                                <p>Vini del Chianti</p>
+                            </div>
+                        </div>
+                        <div class="produttore">
+                            <img src="images/produttore2.jpg" alt="Caseificio Buontalenti">
+                            <div class="produttore-info">
+                                <h4>Caseificio Buontalenti</h4>
+                                <p>Formaggi artigianali</p>
+                            </div>
+                        </div>
+                        <div class="produttore">
+                            <img src="images/produttore3.jpg" alt="Macelleria Bianchi">
+                            <div class="produttore-info">
+                                <h4>Macelleria Bianchi</h4>
+                                <p>Carni chianine</p>
+                            </div>
+                        </div>
+                        <div class="produttore">
+                            <img src="images/produttore4.jpg" alt="Frantoio Gonnelli">
+                            <div class="produttore-info">
+                                <h4>Frantoio Gonnelli</h4>
+                                <p>Olio extra vergine</p>
+                            </div>
+                        </div>
+                        <div class="produttore">
+                            <img src="images/produttore5.jpg" alt="Orto di Silvia">
+                            <div class="produttore-info">
+                                <h4>Orto di Silvia</h4>
+                                <p>Verdure biologiche</p>
+                            </div>
+                        </div>
+                        <div class="produttore">
+                            <img src="images/produttore6.jpg" alt="Forno Antico">
+                            <div class="produttore-info">
+                                <h4>Forno Antico</h4>
+                                <p>Pane toscano</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Osteria del Chianti</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Via del Chianti, 42 - Firenze</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+390551234567">+39 055 123 4567</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@osteriadelchianti.it">info@osteriadelchianti.it</a></p>
+            </div>
+            <div class="footer-orari">
+                <h3>Orari di Apertura</h3>
+                <p>Lunedì - Venerdì: 12:00 - 15:00, 19:00 - 23:00</p>
+                <p>Sabato - Domenica: 12:00 - 23:00</p>
+            </div>
+            <div class="footer-social">
+                <h3>Seguici</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Osteria del Chianti - Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+    <script src="schema-breadcrumb.js"></script>
+    <script src="schema-validator.js"></script>
+    <!-- Analytics rispettosi della privacy -->
+    <script src="js/privacy-analytics.js"></script>
+</body>
+</html>

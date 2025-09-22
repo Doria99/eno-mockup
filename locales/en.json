@@ -1,0 +1,38 @@
+{
+  "general": {
+    "language": "English",
+    "languageCode": "en"
+  },
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "about": "About Us",
+    "contact": "Contact",
+    "book": "Book a Table",
+    "language": "Language"
+  },
+  "footer": {
+    "contact": "Contact",
+    "hours": "Opening Hours",
+    "follow": "Follow Us",
+    "weekdays": "Monday - Friday: 12:00 - 15:00, 19:00 - 23:00",
+    "weekends": "Saturday - Sunday: 12:00 - 23:00",
+    "rights": "All rights reserved"
+  },
+  "home": {
+    "welcome": "Welcome to Osteria del Chianti",
+    "tagline": "Tuscan tradition since 1987",
+    "discover": "Discover our menu",
+    "book": "Book a table",
+    "specialties": "Our specialties",
+    "steak": "Florentine Steak",
+    "steakDesc": "Our Florentine steak is prepared according to Tuscan tradition, cooked on oak wood embers.",
+    "pasta": "Wild Boar Pappardelle",
+    "pastaDesc": "Fresh homemade pasta topped with a rich Maremma wild boar ragù, a dish that tells the story of our land.",
+    "dessert": "Cantucci and Vin Santo",
+    "dessertDesc": "Our cantucci are prepared according to grandmother's recipe, perfect to accompany with a glass of Vin Santo.",
+    "about": "Our story",
+    "aboutDesc": "Osteria del Chianti was born in the heart of Tuscany, where culinary tradition blends with passion for local products. Since 1987 we have been serving authentic dishes that tell the story of our land.",
+    "readMore": "Read more"
+  }
+}

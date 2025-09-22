@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400">
+  <!-- Sfondo piatto -->
+  <circle cx="250" cy="200" r="180" fill="#F5F5DC" />
+  
+  <!-- Bistecca -->
+  <path d="M100,200 Q150,120 250,100 Q350,120 400,200 Q350,280 250,300 Q150,280 100,200 Z" fill="#8B0000" />
+  <path d="M120,200 Q160,140 250,120 Q340,140 380,200 Q340,260 250,280 Q160,260 120,200 Z" fill="#A52A2A" />
+  
+  <!-- Grasso della bistecca -->
+  <path d="M150,170 Q170,150 200,160 Q220,170 200,190 Q180,200 150,170 Z" fill="#F8F8FF" opacity="0.7" />
+  <path d="M300,160 Q320,150 340,170 Q350,190 330,200 Q310,190 300,160 Z" fill="#F8F8FF" opacity="0.7" />
+  
+  <!-- Rosmarino -->
+  <g transform="translate(380,220) rotate(-30)">
+    <line x1="0" y1="0" x2="0" y2="40" stroke="#2E8B57" stroke-width="2" />
+    <path d="M0,5 L-10,10 M0,10 L-12,15 M0,15 L-10,20 M0,20 L-12,25 M0,25 L-10,30 M0,30 L-12,35" stroke="#2E8B57" stroke-width="1.5" />
+  </g>
+  
+  <!-- Gocce di olio -->
+  <circle cx="200" cy="150" r="3" fill="#FFFF00" opacity="0.7" />
+  <circle cx="300" cy="180" r="4" fill="#FFFF00" opacity="0.7" />
+  <circle cx="250" cy="220" r="3" fill="#FFFF00" opacity="0.7" />
+  <circle cx="180" cy="230" r="2" fill="#FFFF00" opacity="0.7" />
+  
+  <!-- Sale grosso -->
+  <circle cx="220" cy="170" r="2" fill="#FFFFFF" />
+  <circle cx="280" cy="160" r="2" fill="#FFFFFF" />
+  <circle cx="260" cy="210" r="2" fill="#FFFFFF" />
+  <circle cx="330" cy="200" r="2" fill="#FFFFFF" />
+  <circle cx="190" cy="190" r="2" fill="#FFFFFF" />
+  
+  <!-- Effetto cottura alla griglia -->
+  <path d="M150,150 L350,150" stroke="#4A0000" stroke-width="3" opacity="0.7" />
+  <path d="M130,180 L370,180" stroke="#4A0000" stroke-width="3" opacity="0.7" />
+  <path d="M120,210 L380,210" stroke="#4A0000" stroke-width="3" opacity="0.7" />
+  <path d="M130,240 L370,240" stroke="#4A0000" stroke-width="3" opacity="0.7" />
+  <path d="M150,270 L350,270" stroke="#4A0000" stroke-width="3" opacity="0.7" />
+  
+  <!-- Ombra del piatto -->
+  <circle cx="250" cy="200" r="180" fill="none" stroke="#CCCCCC" stroke-width="5" />
+  
+  <!-- Overlay per effetto fotografico -->
+  <rect width="500" height="400" fill="#000000" opacity="0.1" />
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100" height="100">
+  <!-- Fiasco di vino -->
+  <path d="M100,20 C85,20 75,30 75,45 L75,120 C75,150 85,170 100,180 C115,170 125,150 125,120 L125,45 C125,30 115,20 100,20 Z" fill="#8B0000" />
+  <!-- Collo della bottiglia -->
+  <rect x="90" y="10" width="20" height="15" fill="#722F37" />
+  <!-- Paglia intrecciata -->
+  <path d="M75,45 C75,45 85,50 100,50 C115,50 125,45 125,45" stroke="#F5F5DC" stroke-width="5" fill="none" />
+  <path d="M75,60 C75,60 85,65 100,65 C115,65 125,60 125,60" stroke="#F5F5DC" stroke-width="5" fill="none" />
+  <path d="M75,75 C75,75 85,80 100,80 C115,80 125,75 125,75" stroke="#F5F5DC" stroke-width="4" fill="none" />
+  <path d="M75,90 C75,90 85,95 100,95 C115,95 125,90 125,90" stroke="#F5F5DC" stroke-width="3" fill="none" />
+  <!-- Riflesso -->
+  <path d="M85,50 C85,100 90,150 95,170" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.3" />
+</svg>

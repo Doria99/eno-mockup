@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <title>Osteria del Chianti - Trattoria Tipica Toscana a Firenze</title>
+    <meta name="description" content="Autentica trattoria toscana nel cuore di Firenze. Specialità tipiche come bistecca alla fiorentina, pappardelle al cinghiale e cantucci col vin santo dal 1965.">
+    <meta name="keywords" content="ristorante toscano, osteria firenze, cucina toscana, bistecca fiorentina, pappardelle cinghiale">
+    <meta name="author" content="Osteria del Chianti">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.osteriadelchianti.it/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.osteriadelchianti.it/">
+    <meta property="og:title" content="Osteria del Chianti - Trattoria Tipica Toscana a Firenze">
+    <meta property="og:description" content="Autentica trattoria toscana nel cuore di Firenze. Specialità tipiche come bistecca alla fiorentina, pappardelle al cinghiale e cantucci col vin santo dal 1965.">
+    <meta property="og:image" content="https://www.osteriadelchianti.it/images/tavolata.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.osteriadelchianti.it/">
+    <meta property="twitter:title" content="Osteria del Chianti - Trattoria Tipica Toscana a Firenze">
+    <meta property="twitter:description" content="Autentica trattoria toscana nel cuore di Firenze. Specialità tipiche come bistecca alla fiorentina, pappardelle al cinghiale e cantucci col vin santo dal 1965.">
+    <meta property="twitter:image" content="https://www.osteriadelchianti.it/images/tavolata.jpg">
+    
+    <!-- Favicon e PWA -->
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#8B0000">
+    
+    <!-- Preload CSS -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Script per l'internazionalizzazione -->
+    <script src="i18n.js" defer></script>
+    <script src="schema-breadcrumb.js"></script>
+    <script src="schema-validator.js"></script>
+    <!-- Schema.org JSON-LD structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Osteria del Chianti",
+      "image": "https://www.osteriadelchianti.it/images/tavolata.jpg",
+      "@id": "https://www.osteriadelchianti.it",
+      "url": "https://www.osteriadelchianti.it",
+      "telephone": "+39 055 123 4567",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via del Chianti, 42",
+        "addressLocality": "Firenze",
+        "postalCode": "50122",
+        "addressCountry": "IT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.7695,
+        "longitude": 11.2558
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "12:00",
+          "closes": "15:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "19:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday", "Sunday"],
+          "opens": "12:00",
+          "closes": "23:00"
+        }
+      ],
+      "servesCuisine": ["Toscana", "Italiana"],
+      "priceRange": "€€",
+      "menu": "https://www.osteriadelchianti.it/menu.html",
+      "acceptsReservations": "True"
+    }
+    </script>
+</head>
+<body>
+    <header role="banner">
+        <div class="logo-container">
+            <img src="images/logo.svg" alt="Logo Osteria del Chianti" class="logo" width="50" height="50">
+            <h1>Osteria del Chianti</h1>
+        </div>
+        <nav role="navigation" aria-label="Menu principale">
+            <ul>
+                <li><a href="index.html" aria-current="page" data-i18n="nav.home">Home</a></li>
+                <li><a href="menu.html" data-i18n="nav.menu">Menu</a></li>
+                <li><a href="chi-siamo.html" data-i18n="nav.about">Chi Siamo</a></li>
+                <li><a href="contatti.html" data-i18n="nav.contact">Contatti</a></li>
+                <li><div id="language-container" class="language-selector"></div></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-btn" aria-label="Apri menu mobile" role="button" tabindex="0">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </div>
+    </header>
+
+    <main role="main">
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="hero-content">
+                <h2 id="hero-heading" data-i18n="home.welcome">Benvenuti all'Osteria del Chianti</h2>
+                <p data-i18n="home.tagline">Tradizione toscana dal 1987</p>
+                <a href="prenota.html" class="btn-prenota" role="button" data-i18n="home.book">Prenota un Tavolo</a>
+            </div>
+        </section>
+
+        <section class="specialita" aria-labelledby="specialita-heading">
+            <h2 id="specialita-heading" data-i18n="home.specialties">Le nostre specialità</h2>
+            <div class="piatti-container">
+                <article class="piatto">
+                    <img src="images/bistecca.jpg" 
+                         srcset="images/bistecca-small.jpg 480w, images/bistecca.jpg 800w" 
+                         sizes="(max-width: 600px) 480px, 800px"
+                         alt="Bistecca alla Fiorentina" width="350" height="250" loading="lazy">
+                    <h3 data-i18n="home.steak">Bistecca alla Fiorentina</h3>
+                    <p data-i18n="home.steakDesc">La nostra bistecca alla fiorentina è preparata secondo la tradizione toscana, cotta sulla brace di legna di quercia.</p>
+                </article>
+                <article class="piatto">
+                    <img src="images/pappardelle.jpg" 
+                         srcset="images/pappardelle-small.jpg 480w, images/pappardelle.jpg 800w" 
+                         sizes="(max-width: 600px) 480px, 800px"
+                         alt="Pappardelle al Cinghiale" width="350" height="250" loading="lazy">
+                    <h3 data-i18n="home.pasta">Pappardelle al Cinghiale</h3>
+                    <p data-i18n="home.pastaDesc">Pasta fresca fatta in casa condita con un ricco ragù di cinghiale maremmano, un piatto che racconta la storia della nostra terra.</p>
+                </article>
+                <article class="piatto">
+                    <img src="images/cantucci.jpg" 
+                         srcset="images/cantucci-small.jpg 480w, images/cantucci.jpg 800w" 
+                         sizes="(max-width: 600px) 480px, 800px"
+                         alt="Cantucci col Vin Santo" width="350" height="250" loading="lazy">
+                    <h3 data-i18n="home.dessert">Cantucci e Vin Santo</h3>
+                    <p data-i18n="home.dessertDesc">I nostri cantucci sono preparati secondo la ricetta della nonna, perfetti da accompagnare con un bicchiere di Vin Santo.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="recensione" aria-label="Recensioni dei clienti">
+            <div class="recensione-box">
+                <i class="fas fa-quote-left" aria-hidden="true"></i>
+                <blockquote>
+                    <p>"La miglior ribollita di Firenze! Un'esperienza autentica che ti fa sentire a casa."</p>
+                    <footer class="recensione-autore">- <cite>La Repubblica Food</cite></footer>
+                </blockquote>
+            </div>
+        </section>
+
+        <section class="prenota-section" aria-labelledby="prenota-heading">
+            <div class="prenota-content">
+                <h2 id="prenota-heading" data-i18n="home.about">La nostra storia</h2>
+                <p data-i18n="home.aboutDesc">L'Osteria del Chianti nasce nel cuore della Toscana, dove la tradizione culinaria si fonde con la passione per i prodotti locali. Dal 1987 serviamo piatti autentici che raccontano la nostra terra.</p>
+                <a href="prenota.html" class="btn-prenota" role="button" data-i18n="home.book">Prenota un Tavolo</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Osteria del Chianti</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Via del Chianti, 42 - Firenze</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+390551234567">+39 055 123 4567</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@osteriadelchianti.it">info@osteriadelchianti.it</a></p>
+            </div>
+            <div class="footer-orari">
+                <h3 data-i18n="footer.hours">Orari di Apertura</h3>
+                <p data-i18n="footer.weekdays">Lunedì - Venerdì: 12:00 - 15:00, 19:00 - 23:00</p>
+                <p data-i18n="footer.weekends">Sabato - Domenica: 12:00 - 23:00</p>
+            </div>
+            <div class="footer-social">
+                <h3 data-i18n="footer.follow">Seguici</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Osteria del Chianti - <span data-i18n="footer.rights">Tutti i diritti riservati</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Analytics rispettosi della privacy -->
+    <script src="js/privacy-analytics.js"></script>
+    <script src="js/consent-manager.js"></script>
+    
+    <!-- Inizializzazione del selettore della lingua -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Crea il selettore della lingua
+            window.i18n.createLanguageSelector('language-container', [
+                {code: 'it', name: 'Italiano'},
+                {code: 'en', name: 'English'}
+            ]);
+        });
+    </script>
+    
+    <!-- Registrazione del Service Worker per funzionalità offline e caching -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('Service Worker registrato con successo:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('Registrazione Service Worker fallita:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

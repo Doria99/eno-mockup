@@ -1,0 +1,819 @@
+/**
+ * Osteria del Chianti - Stili CSS
+ *
+ * Questo file contiene tutti gli stili CSS del sito web dell'Osteria del Chianti.
+ * È organizzato in sezioni per facilitare la manutenzione e include ottimizzazioni
+ * per performance, accessibilità e responsive design.
+ *
+ * Indice:
+ * 1. Variabili CSS (colori, tipografia, spaziatura)
+ * 2. Ottimizzazioni per rendering e performance
+ * 3. Supporto per tema scuro
+ * 4. Ottimizzazioni per font e accessibilità
+ * 5. Stili di base
+ * 6. Header e navigazione
+ * 7. Sezioni principali (hero, specialità, recensioni)
+ * 8. Footer
+ * 9. Responsive design
+ * 10. Menu mobile
+ *
+ * @author Osteria del Chianti Dev Team
+ * @version 1.0.0
+ */
+
+/* Stili generali - CSS critico per il rendering iniziale */
+:root {
+    /* Colori principali */
+    --color-primary: #8B0000; /* Bordeaux */
+    --color-secondary: #F5F5DC; /* Crema */
+    --color-accent: #722F37; /* Bordeaux più scuro */
+    --color-text: #333333;
+    --color-light: #ffffff;
+    
+    /* Tipografia */
+    --font-primary: 'Playfair Display', serif;
+    --font-secondary: 'Lato', sans-serif;
+    
+    /* Spaziatura */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    /* Border radius */
+    --radius-sm: 5px;
+    --radius-md: 10px;
+    --radius-lg: 20px;
+    
+    /* Transizioni */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* Ottimizzazione per il rendering e performance */
+@media screen {
+    body {
+        content-visibility: auto;
+        contain-intrinsic-size: 1000px;
+    }
+}
+
+/* Supporto per tema scuro */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-primary: #ff6b6b; /* Rosso più chiaro per contrasto */
+        --color-secondary: #2c2c2c; /* Sfondo scuro */
+        --color-accent: #ff8e8e; /* Accento più chiaro */
+        --color-text: #f0f0f0; /* Testo chiaro */
+        --color-light: #1a1a1a; /* Sfondo elementi */
+    }
+    
+    body {
+        background-color: var(--color-secondary);
+        color: var(--color-text);
+    }
+    
+    header, .specialita, .recensione-box {
+        background-color: var(--color-light);
+    }
+    
+    .piatto {
+        background-color: #333;
+    }
+    
+    /* Migliora la leggibilità del testo su sfondo scuro */
+    p, li, h3 {
+        font-weight: 400;
+    }
+    
+    /* Ottimizzazione per risparmio energetico su OLED */
+    @media (pointer: coarse) {
+        body.dark-theme-enabled {
+            background-color: #000;
+        }
+        
+        .dark-theme-enabled .footer,
+        .dark-theme-enabled header {
+            background-color: #000;
+        }
+    }
+}
+
+/* Ottimizzazione per il caricamento dei font */
+@font-face {
+    font-family: 'Playfair Display';
+    font-display: swap; /* Migliora CLS (Cumulative Layout Shift) */
+    src: local('Playfair Display');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-display: swap;
+    src: local('Lato');
+}
+
+/* Ottimizzazione per l'accessibilità */
+:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+/* Supporto per preferenze di riduzione del movimento */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .btn-prenota:hover,
+    .piatto:hover,
+    .social-icons a:hover {
+        transform: none !important;
+    }
+}
+
+/* Ottimizzazione per dispositivi touch */
+@media (pointer: coarse) {
+    /* Aumenta la dimensione dei target touch */
+    button, 
+    a, 
+    input, 
+    select, 
+    textarea {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Aumenta la spaziatura tra elementi interattivi */
+    nav ul {
+        gap: 2.5rem;
+    }
+    
+    /* Migliora la leggibilità del testo */
+    p, li {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+    
+    /* Feedback visivo per interazioni touch */
+    .touch-active {
+        transform: scale(0.98);
+        transition: transform 0.2s;
+        opacity: 0.9;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-secondary);
+    color: var(--color-text);
+    line-height: 1.6;
+    background-color: var(--color-secondary);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header e navigazione */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--color-light);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 1rem;
+}
+
+h1 {
+    font-family: var(--font-primary);
+    font-size: 1.8rem;
+    color: var(--color-primary);
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-primary);
+}
+
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero section */
+.hero {
+    height: 80vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/tavolata.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-light);
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero h2 {
+    font-family: var(--font-primary);
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn-prenota {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-prenota:hover {
+    background-color: var(--color-accent);
+    transform: translateY(-3px);
+}
+
+/* Specialità section */
+.specialita {
+    padding: 5rem 5%;
+    text-align: center;
+    background-color: var(--color-light);
+    container-type: inline-size; /* Supporto per container queries */
+    container-name: specialita-section;
+}
+
+.specialita h2 {
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.specialita h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-primary);
+    margin: 0.5rem auto;
+}
+
+.piatti-container {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.piatto {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    background-color: var(--color-secondary);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-normal);
+    will-change: transform; /* Ottimizzazione per animazioni */
+}
+
+/* Container queries per i piatti */
+@container specialita-section (width < 768px) {
+    .piatto {
+        min-width: 280px;
+    }
+}
+
+@container specialita-section (width < 480px) {
+    .piatto {
+        min-width: 100%;
+    }
+}
+
+.piatto:hover {
+    transform: translateY(-10px);
+}
+
+.piatto img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    max-width: 100%;
+    loading: lazy; /* Caricamento lazy per migliorare performance */
+    will-change: opacity; /* Ottimizzazione per transizioni */
+    transition: opacity var(--transition-fast);
+}
+
+/* Effetto di caricamento progressivo delle immagini */
+.piatto img.loading {
+    opacity: 0.6;
+    filter: blur(10px);
+}
+
+.piatto img.loaded {
+    opacity: 1;
+    filter: blur(0);
+}
+
+.piatto h3 {
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+    padding: 1rem;
+}
+
+.piatto p {
+    padding: 0 1rem 1.5rem;
+    color: var(--color-text);
+}
+
+/* Recensione section */
+.recensione {
+    padding: 5rem 5%;
+    background-color: var(--color-secondary);
+    text-align: center;
+}
+
+.recensione-box {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem;
+    background-color: var(--color-light);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.recensione-box i {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.recensione-box p {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.recensione-autore {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* Prenota section */
+.prenota-section {
+    padding: 5rem 5%;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    text-align: center;
+}
+
+.prenota-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.prenota-section h2 {
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.prenota-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.prenota-section .btn-prenota {
+    background-color: var(--color-light);
+    color: var(--color-primary);
+}
+
+.prenota-section .btn-prenota:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Stili per il selettore della lingua */
+.language-selector {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+#language-selector {
+    padding: 0.5rem;
+    border: 1px solid var(--color-accent);
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--color-text);
+    font-family: var(--font-body);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#language-selector:hover {
+    border-color: var(--color-primary);
+}
+
+#language-selector option {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+    .language-selector {
+        margin: 0.5rem 0;
+    }
+    
+    .mobile-nav .language-selector {
+        margin: 1rem auto;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: var(--color-light);
+    padding: 3rem 5% 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-info, .footer-orari, .footer-social {
+    flex: 1;
+    min-width: 250px;
+}
+
+footer h3 {
+    font-family: var(--font-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+footer p {
+    margin-bottom: 0.8rem;
+}
+
+footer i {
+    margin-right: 0.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.social-icons a:hover {
+    background-color: var(--color-accent);
+    transform: translateY(-3px);
+}
+
+.social-icons i {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+/* Ottimizzazioni per l'accessibilità */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Supporto per la stampa */
+@media print {
+    header, nav, .btn-prenota, .prenota-section, footer {
+        display: none;
+    }
+    
+    body {
+        background-color: white;
+        color: black;
+        font-size: 12pt;
+    }
+    
+    .hero {
+        height: auto;
+        background-image: none;
+        color: black;
+    }
+    
+    .hero h2 {
+        color: black;
+        text-shadow: none;
+    }
+    
+    .piatto {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+    
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+    }
+}
+
+/* Responsive design */
+/* Tablet (iPad, dispositivi medi) */
+@media (max-width: 1024px) {
+    .hero h2 {
+        font-size: 3rem;
+    }
+    
+    .piatti-container {
+        gap: 1.5rem;
+    }
+    
+    .piatto {
+        min-width: 280px;
+    }
+    
+    .recensione-box {
+        padding: 2rem;
+    }
+    
+    .recensione-box p {
+        font-size: 1.3rem;
+    }
+}
+
+/* Dispositivi mobili (iPhone, smartphone) */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .piatti-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .piatto {
+        max-width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .btn-prenota {
+        padding: 1.2rem 2.2rem; /* Aumentato per migliorare target touch */
+        font-size: 1.3rem;
+    }
+    
+    .social-icons a {
+        width: 50px; /* Aumentato per migliorare target touch */
+        height: 50px;
+    }
+    
+    /* Ottimizzazione per il caricamento delle immagini */
+    img {
+        content-visibility: auto;
+    }
+    
+    /* Miglioramento delle performance di scroll */
+    body {
+        scroll-padding-top: var(--spacing-lg);
+    }
+}
+
+/* Ottimizzazioni per iPhone moderni */
+@media screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3),
+       screen and (min-device-width: 390px) and (max-device-width: 844px) and (-webkit-device-pixel-ratio: 3) {
+    /* iPhone 12, 13, 14 */
+    .hero h2 {
+        font-size: 2.3rem;
+    }
+    
+    .piatto {
+        border-radius: var(--radius-md);
+    }
+    
+    /* Ottimizzazione per notch e dynamic island */
+    header {
+        padding-top: env(safe-area-inset-top);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+    
+    footer {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+/* Ottimizzazioni per iPad Pro */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+    .piatti-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    .hero-content {
+        max-width: 900px;
+    }
+}
+
+/* Dispositivi mobili piccoli */
+@media (max-width: 480px) {
+    header {
+        padding: 0.8rem 3%;
+    }
+    
+    .logo {
+        height: 40px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero {
+        height: 70vh;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .specialita, .recensione, .prenota-section {
+        padding: 3rem 3%;
+    }
+    
+    .specialita h2, .prenota-section h2 {
+        font-size: 2rem;
+    }
+    
+    .recensione-box p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Orientamento orizzontale (landscape) per dispositivi mobili */
+@media (max-width: 896px) and (orientation: landscape) {
+    .hero {
+        height: 100vh; /* Occupa tutto lo spazio disponibile in orizzontale */
+    }
+    
+    .hero h2 {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .piatti-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+    
+    .recensione-box {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+    
+    /* Migliora la navigazione in modalità landscape */
+    nav ul {
+        gap: 1.5rem;
+    }
+    
+    .mobile-nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+}
+
+/* Menu mobile */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    transform: translateY(-100%);
+    transition: transform 0.4s;
+}
+
+.mobile-nav.active {
+    transform: translateY(0);
+}
+
+.mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+
+.mobile-nav a {
+    color: var(--color-light);
+    font-size: 1.5rem;
+}
+
+.close-menu {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+    color: var(--color-light);
+    cursor: pointer;
+}

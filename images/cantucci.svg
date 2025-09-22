@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Sfondo del piatto -->
+  <ellipse cx="400" cy="350" rx="350" ry="200" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="2"/>
+  
+  <!-- Piattino per cantucci -->
+  <ellipse cx="300" cy="350" rx="150" ry="80" fill="#f8f8f8" stroke="#d0d0d0" stroke-width="2"/>
+  
+  <!-- Cantucci -->
+  <!-- Cantuccio 1 -->
+  <path d="M220 320 L260 310 L270 340 L230 350 Z" fill="#D2691E" stroke="#8B4513" stroke-width="1"/>
+  <path d="M220 320 L260 310 L270 340 L230 350 Z" fill="#D2691E" stroke="#8B4513" stroke-width="1" transform="rotate(10, 300, 350)"/>
+  
+  <!-- Cantuccio 2 -->
+  <path d="M250 330 L290 320 L300 350 L260 360 Z" fill="#D2691E" stroke="#8B4513" stroke-width="1"/>
+  <path d="M250 330 L290 320 L300 350 L260 360 Z" fill="#D2691E" stroke="#8B4513" stroke-width="1" transform="rotate(-15, 300, 350)"/>
+  
+  <!-- Cantuccio 3 -->
+  <path d="M280 310 L320 300 L330 330 L290 340 Z" fill="#D2691E" stroke="#8B4513" stroke-width="1"/>
+  
+  <!-- Cantuccio 4 -->
+  <path d="M310 330 L350 320 L360 350 L320 360 Z" fill="#D2691E" stroke="#8B4513" stroke-width="1"/>
+  
+  <!-- Cantuccio 5 -->
+  <path d="M340 320 L380 310 L390 340 L350 350 Z" fill="#D2691E" stroke="#8B4513" stroke-width="1"/>
+  <path d="M340 320 L380 310 L390 340 L350 350 Z" fill="#D2691E" stroke="#8B4513" stroke-width="1" transform="rotate(20, 300, 350)"/>
+  
+  <!-- Dettagli dei cantucci (mandorle) -->
+  <ellipse cx="240" cy="330" rx="3" ry="5" fill="#FAEBD7" transform="rotate(30, 240, 330)"/>
+  <ellipse cx="255" cy="325" rx="3" ry="5" fill="#FAEBD7" transform="rotate(45, 255, 325)"/>
+  <ellipse cx="270" cy="335" rx="3" ry="5" fill="#FAEBD7" transform="rotate(60, 270, 335)"/>
+  
+  <ellipse cx="290" cy="325" rx="3" ry="5" fill="#FAEBD7" transform="rotate(30, 290, 325)"/>
+  <ellipse cx="305" cy="340" rx="3" ry="5" fill="#FAEBD7" transform="rotate(45, 305, 340)"/>
+  
+  <ellipse cx="330" cy="320" rx="3" ry="5" fill="#FAEBD7" transform="rotate(30, 330, 320)"/>
+  <ellipse cx="345" cy="335" rx="3" ry="5" fill="#FAEBD7" transform="rotate(60, 345, 335)"/>
+  
+  <ellipse cx="370" cy="325" rx="3" ry="5" fill="#FAEBD7" transform="rotate(45, 370, 325)"/>
+  <ellipse cx="385" cy="330" rx="3" ry="5" fill="#FAEBD7" transform="rotate(30, 385, 330)"/>
+  
+  <!-- Bicchiere di Vin Santo -->
+  <path d="M500 300 L530 300 L520 400 L510 400 Z" fill="none" stroke="#d0d0d0" stroke-width="1"/>
+  <path d="M505 310 L525 310 L518 390 L512 390 Z" fill="#FFD700" opacity="0.7"/>
+  
+  <!-- Riflessi sul bicchiere -->
+  <line x1="508" y1="320" x2="508" y2="350" stroke="#FFFFFF" stroke-width="1" opacity="0.5"/>
+  <line x1="522" y1="320" x2="522" y2="350" stroke="#FFFFFF" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Base del bicchiere -->
+  <ellipse cx="515" cy="400" rx="10" ry="3" fill="#d0d0d0"/>
+  
+  <!-- Zucchero a velo sui cantucci -->
+  <circle cx="250" cy="320" r="1" fill="#FFFFFF"/>
+  <circle cx="260" cy="325" r="1" fill="#FFFFFF"/>
+  <circle cx="270" cy="315" r="1" fill="#FFFFFF"/>
+  <circle cx="280" cy="330" r="1" fill="#FFFFFF"/>
+  <circle cx="290" cy="320" r="1" fill="#FFFFFF"/>
+  <circle cx="300" cy="325" r="1" fill="#FFFFFF"/>
+  <circle cx="310" cy="315" r="1" fill="#FFFFFF"/>
+  <circle cx="320" cy="330" r="1" fill="#FFFFFF"/>
+  <circle cx="330" cy="320" r="1" fill="#FFFFFF"/>
+  <circle cx="340" cy="325" r="1" fill="#FFFFFF"/>
+  <circle cx="350" cy="315" r="1" fill="#FFFFFF"/>
+  <circle cx="360" cy="330" r="1" fill="#FFFFFF"/>
+  <circle cx="370" cy="320" r="1" fill="#FFFFFF"/>
+</svg>
