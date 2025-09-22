@@ -324,18 +324,7 @@ nav a:hover {
     will-change: transform; /* Ottimizzazione per animazioni */
 }
 
-/* Container queries per i piatti */
-@container specialita-section (width < 768px) {
-    .piatto {
-        min-width: 280px;
-    }
-}
-
-@container specialita-section (width < 480px) {
-    .piatto {
-        min-width: 100%;
-    }
-}
+/* Container queries per i piatti - rimossi per compatibilità */
 
 .piatto:hover {
     transform: translateY(-10px);
