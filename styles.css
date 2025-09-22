@@ -23,12 +23,50 @@
 
 /* Stili generali - CSS critico per il rendering iniziale */
 :root {
+    /* Palette di colori centralizzata - Osteria del Chianti */
+    
     /* Colori principali */
-    --color-primary: #8B0000; /* Bordeaux */
+    --color-primary: #8B0000; /* Bordeaux principale */
+    --color-primary-light: #A52A2A; /* Bordeaux più chiaro */
+    --color-primary-dark: #5D0000; /* Bordeaux più scuro */
+    
+    /* Colori secondari */
     --color-secondary: #F5F5DC; /* Crema */
-    --color-accent: #722F37; /* Bordeaux più scuro */
-    --color-text: #333333;
-    --color-light: #ffffff;
+    --color-secondary-light: #FFFEF7; /* Crema più chiara */
+    --color-secondary-dark: #E6E6D1; /* Crema più scura */
+    
+    /* Colori di accento */
+    --color-accent: #722F37; /* Bordeaux accento */
+    --color-accent-light: #8B3A42; /* Accento più chiaro */
+    --color-accent-dark: #5A252B; /* Accento più scuro */
+    
+    /* Colori neutri */
+    --color-text-primary: #2C2C2C; /* Testo principale - alto contrasto */
+    --color-text-secondary: #4A4A4A; /* Testo secondario */
+    --color-text-muted: #6B6B6B; /* Testo attenuato */
+    --color-text-light: #FFFFFF; /* Testo su sfondo scuro */
+    
+    /* Colori di sfondo */
+    --color-bg-primary: #FFFFFF; /* Sfondo principale */
+    --color-bg-secondary: #F8F8F8; /* Sfondo secondario */
+    --color-bg-tertiary: #F0F0F0; /* Sfondo terziario */
+    --color-bg-dark: #1A1A1A; /* Sfondo scuro */
+    
+    /* Colori di stato */
+    --color-success: #2E7D32; /* Verde successo */
+    --color-warning: #F57C00; /* Arancione warning */
+    --color-error: #D32F2F; /* Rosso errore */
+    --color-info: #1976D2; /* Blu informazione */
+    
+    /* Colori di bordo */
+    --color-border-light: #E0E0E0; /* Bordo chiaro */
+    --color-border-medium: #BDBDBD; /* Bordo medio */
+    --color-border-dark: #757575; /* Bordo scuro */
+    
+    /* Colori di ombra */
+    --color-shadow-light: rgba(0, 0, 0, 0.1); /* Ombra leggera */
+    --color-shadow-medium: rgba(0, 0, 0, 0.2); /* Ombra media */
+    --color-shadow-dark: rgba(0, 0, 0, 0.3); /* Ombra scura */
     
     /* Tipografia */
     --font-primary: 'Playfair Display', serif;
@@ -63,40 +101,78 @@
 /* Supporto per tema scuro */
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-primary: #ff6b6b; /* Rosso più chiaro per contrasto */
-        --color-secondary: #2c2c2c; /* Sfondo scuro */
-        --color-accent: #ff8e8e; /* Accento più chiaro */
-        --color-text: #f0f0f0; /* Testo chiaro */
-        --color-light: #1a1a1a; /* Sfondo elementi */
+        /* Colori principali per tema scuro */
+        --color-primary: #FF6B6B; /* Rosso più chiaro per contrasto */
+        --color-primary-light: #FF8A8A; /* Rosso più chiaro */
+        --color-primary-dark: #E53E3E; /* Rosso più scuro */
+        
+        /* Colori secondari per tema scuro */
+        --color-secondary: #2C2C2C; /* Sfondo scuro */
+        --color-secondary-light: #3A3A3A; /* Sfondo più chiaro */
+        --color-secondary-dark: #1A1A1A; /* Sfondo più scuro */
+        
+        /* Colori di accento per tema scuro */
+        --color-accent: #FF8E8E; /* Accento più chiaro */
+        --color-accent-light: #FFA8A8; /* Accento più chiaro */
+        --color-accent-dark: #FF6B6B; /* Accento più scuro */
+        
+        /* Colori neutri per tema scuro */
+        --color-text-primary: #F0F0F0; /* Testo principale chiaro */
+        --color-text-secondary: #D0D0D0; /* Testo secondario */
+        --color-text-muted: #B0B0B0; /* Testo attenuato */
+        --color-text-light: #FFFFFF; /* Testo su sfondo scuro */
+        
+        /* Colori di sfondo per tema scuro */
+        --color-bg-primary: #1A1A1A; /* Sfondo principale scuro */
+        --color-bg-secondary: #2C2C2C; /* Sfondo secondario */
+        --color-bg-tertiary: #3A3A3A; /* Sfondo terziario */
+        --color-bg-dark: #0D0D0D; /* Sfondo molto scuro */
+        
+        /* Colori di stato per tema scuro */
+        --color-success: #4CAF50; /* Verde successo più chiaro */
+        --color-warning: #FF9800; /* Arancione warning più chiaro */
+        --color-error: #F44336; /* Rosso errore più chiaro */
+        --color-info: #2196F3; /* Blu informazione più chiaro */
+        
+        /* Colori di bordo per tema scuro */
+        --color-border-light: #404040; /* Bordo chiaro */
+        --color-border-medium: #606060; /* Bordo medio */
+        --color-border-dark: #808080; /* Bordo scuro */
+        
+        /* Colori di ombra per tema scuro */
+        --color-shadow-light: rgba(255, 255, 255, 0.1); /* Ombra leggera */
+        --color-shadow-medium: rgba(255, 255, 255, 0.2); /* Ombra media */
+        --color-shadow-dark: rgba(255, 255, 255, 0.3); /* Ombra scura */
     }
     
     body {
-        background-color: var(--color-secondary);
-        color: var(--color-text);
+        background-color: var(--color-bg-primary);
+        color: var(--color-text-primary);
     }
     
     header, .specialita, .recensione-box {
-        background-color: var(--color-light);
+        background-color: var(--color-bg-secondary);
     }
     
     .piatto {
-        background-color: #333;
+        background-color: var(--color-bg-tertiary);
     }
     
     /* Migliora la leggibilità del testo su sfondo scuro */
     p, li, h3 {
         font-weight: 400;
+        color: var(--color-text-primary);
     }
     
     /* Ottimizzazione per risparmio energetico su OLED */
     @media (pointer: coarse) {
         body.dark-theme-enabled {
-            background-color: #000;
+            background-color: var(--color-bg-dark);
         }
         
         .dark-theme-enabled .footer,
         .dark-theme-enabled header {
-            background-color: #000;
+            background-color: var(--color-bg-dark);
         }
     }
 }
@@ -175,9 +251,9 @@
 
 body {
     font-family: var(--font-secondary);
-    color: var(--color-text);
+    color: var(--color-text-primary);
     line-height: 1.6;
-    background-color: var(--color-secondary);
+    background-color: var(--color-bg-primary);
 }
 
 a {
@@ -195,8 +271,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    background-color: var(--color-light);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-bg-primary);
+    box-shadow: 0 2px 10px var(--color-shadow-light);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -241,7 +317,7 @@ nav a:hover {
 /* Hero section */
 .hero {
     height: 80vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/tavolata.jpg');
+    background-image: linear-gradient(var(--color-shadow-medium), var(--color-shadow-medium)), url('images/tavolata.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -260,7 +336,7 @@ nav a:hover {
     font-family: var(--font-primary);
     font-size: 3.5rem;
     margin-bottom: 2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px var(--color-shadow-medium);
 }
 
 .btn-prenota {
@@ -319,7 +395,7 @@ nav a:hover {
     background-color: var(--color-secondary);
     border-radius: var(--radius-md);
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px var(--color-shadow-light);
     transition: transform var(--transition-normal);
     will-change: transform; /* Ottimizzazione per animazioni */
 }
@@ -376,7 +452,7 @@ nav a:hover {
     padding: 3rem;
     background-color: var(--color-light);
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px var(--color-shadow-light);
     position: relative;
 }
 
@@ -469,8 +545,8 @@ nav a:hover {
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: var(--color-light);
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-text-light);
     padding: 3rem 5% 1rem;
 }
 
@@ -530,7 +606,7 @@ footer i {
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--color-border-light);
     font-size: 0.9rem;
 }
 
@@ -574,7 +650,7 @@ footer i {
         break-inside: avoid;
         page-break-inside: avoid;
         box-shadow: none;
-        border: 1px solid #ddd;
+        border: 1px solid var(--color-border-light);
     }
     
     a {
